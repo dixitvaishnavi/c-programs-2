@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+  int number,i;
+  long int fact=1;
+
+  printf("Enter number greater than zero :\n");
+  scanf("%d",&number);
+
+  //finding factorial     
+  for(i=1;i<=number;i++)
+     fact=fact*i;
+   printf("\n %d!=%ld \n",number,fact);
+
+  return 0;
+}
