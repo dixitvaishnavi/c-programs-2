@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+  int i,noOfTerms,sum=0;
+
+  printf(" Enter the number of terms till where the sum is to be calculated :");
+  scanf("%d",&noOfTerms);
+
+  for(i=1;i<=noOfTerms;i++)
+     sum=sum+i;
+
+  printf("1+2+3+....%d = %d",noOfTerms,sum);
+
+  return 0;
+}
