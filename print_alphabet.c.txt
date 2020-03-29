@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	char c;
+	
+	printf("English Alphabets :");
+	for(c='A';c<='Z';c++)
+	   printf("%c\t",c);
+	
+	return 0;
+}
+
+	
