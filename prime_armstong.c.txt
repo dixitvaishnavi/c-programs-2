@@ -1,0 +1,55 @@
+#include<math.h>
+#include<stdio.h>
+int checkPrimeNumber(int n);
+int checkArmstrongNumber(int n);
+int main()
+{
+  int n ,flag;
+  printf("Enter a positive number :");
+  scanf("%d",&n);
+
+  flag=checkArmstrongNumber(n);
+  if(flag==1)
+    printf(" %d is an armstrong number",n);
+  else
+    printf(" %d is not an armstrong number",n);
+
+  return 0;
+}
+
+  int checkPrimeNumber(int n)
+    {
+      int i,flag=1;
+      for(i=2;i<=n/2;i++)
+       {
+          if(n%i==0)
+            {
+              flag=0;    
+              break;
+            }
+       }
+     return flag;
+}
+   int checkArmstrongNumber(int num)
+     {
+       int original,rem,n=0,flag;
+       double result=0.0;
+       original=num;
+       while(original!=0)
+        {  original/=10;
+           n++;
+         }
+       original=num;
+       while(original!=0)
+         {
+           rem=original%10;
+           result+=pow(rem,n);
+           original/=10;
+         }
+
+       if(round(result)==num)
+           flag=1;
+       else
+           flag=0;
+       return flag;
+}
